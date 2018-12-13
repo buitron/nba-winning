@@ -36,6 +36,7 @@ def get_table(year=None, driver='chrome'):
     elif driver == 'chrome':
         options = chrome.options.Options()
         options.add_argument('no-sandbox')
+        # options.add_argument('disable-dev-shm-usage')
         # options.headless = True
 
         driver = chrome.webdriver.WebDriver(
