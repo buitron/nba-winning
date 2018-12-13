@@ -1,0 +1,5 @@
+Linear Regression | Regressor
+
+Model Tuned Hyperperamters: {'copy_X': True, 'fit_intercept': True, 'n_jobs': 2, 'normalize': False}        
+Training RMSE: 3.1247511026232018
+Testing RMSE: 3.6847206308849056

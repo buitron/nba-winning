@@ -1,0 +1,283 @@
+a {
+	text-decoration: none;
+}
+
+button {
+	cursor: pointer;
+}
+
+.box-1 {
+	width: 10%;
+}
+
+.box-2 {
+	width: 20%;
+}
+
+.box-3 {
+	width: 30%;
+}
+
+.box-4 {
+	width: 40%;
+}
+
+.box-5 {
+	width: 50%;
+}
+
+.box-6 {
+	width: 60%;
+}
+
+.box-7 {
+	width: 70%;
+}
+
+.box-8 {
+	width: 80%;
+}
+
+img.responsive {
+	width: auto;
+	max-height: 100%;
+}
+
+/* ---------------
+/* Info Bar
+/* --------------*/
+div#top-bar {
+	position: fixed;
+	display: flex;
+	background: #000;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 21vh;
+	z-index: 1;
+}
+
+div#top-bar .img {
+	position: relative;
+    text-align: center;
+    color: #000;
+    font-size: 14px;
+    font-weight: 800;
+	padding: 20px;
+}
+
+div#top-bar .img .centered {
+	position: absolute;
+	display: none;
+    top: 50%;
+    left: 50px;
+    color: #dc143c;
+    transform: translate(-50%, -50%);
+}
+
+div#top-bar .img img {
+	float: left;
+}
+
+div#top-bar .text {
+	color: #fff;
+	padding: 0 20px 0 20px;
+}
+
+div#top-bar .btn {
+	padding: 20px;
+}
+
+div#top-bar div.btn button {
+	/*background: #cc5500;*/
+	background: url(../img/ball.png);
+	height: 130px;
+	width: 67px;
+	border: 2px solid #fff;
+	border-radius: 10px;
+	color: #fff;
+	font-size: 14px;
+	font-weight: 800;
+	float: right;
+}
+
+div#top-bar div.btn button:active {
+	border: 3px solid #fff;
+	box-shadow: inset 1px 1px 20px rgba(255,255,255,0.2);
+	-webkit-box-shadow: inset 1px 1px 20px rgba(255,255,255,0.2);
+	   -moz-box-shadow: inset 1px 1px 20px rgba(255,255,255,0.2);
+	outline: none;
+}
+
+/* ---------------
+/* Jumbotron 
+/* --------------*/
+div#slider {
+	overflow: hidden;
+	position: relative;
+	top: 0;
+	height: 25vh;
+	width: 80%;
+	margin: 0 auto;
+	border: 1px solid #000;
+	border-radius: 0 0 10px 10px;
+
+	transition-property: all;
+	transition-duration: 0.5s;
+	transition-timing-function: cubic-bezier(0,1,0.5,1);
+}
+
+div#slider.opened {
+	background: #fff;
+	height: 700px;
+	max-height: 800px;
+}
+
+div#slider #jumbotron {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+}
+
+div#button-container {
+	text-align: center;
+}
+
+div#button-container button {
+	height: 50px;
+	width: 100px;
+	border: 1px solid #000;
+	border-radius: 0 0 25px 25px;
+}
+
+button:focus {
+	outline: 0;
+}
+
+/* Scrolling Marquees */
+div#jumbotron #marquee {
+	background: #000;
+	height: 50px;
+	font-size: 24px;
+}
+
+#marquee p {
+	width: 1000px;
+	margin: auto;
+	color: #ff0000;
+	line-height: 50px;
+
+	-moz-transform:translateX(90%);
+	-webkit-transform:translateX(90%);
+	transform: translateX(90%);
+
+	-moz-animation: marquee 10s linear infinite;
+	-webkit-animation: marquee 10s linear infinite;
+	animation: marquee 10s linear infinite;
+}
+
+@-moz-keyframes marquee {
+	0% { -moz-transform: translateX(90%); }
+	100% { -moz-transform: translateX(-100%); }
+}
+
+@-webkit-keyframes marquee {
+	0% {-webkit-transform: translateX(90%); }
+	100% {-webkit-transform: translateX(-90%); }
+}
+
+@keyframes marquee {
+	0%   { 
+	-moz-transform: translateX(90%); /* Firefox bug fix */
+	-webkit-transform: translateX(90%); /* Firefox bug fix */
+	transform: translateX(90%); 		
+	}
+	100% { 
+	-moz-transform: translateX(-90%); /* Firefox bug fix */
+	-webkit-transform: translateX(-90%); /* Firefox bug fix */
+	transform: translateX(-90%); 
+	}
+}
+/* end Scrollin Marquee */
+
+/* ---------------
+/* ML Table / Button
+/* --------------*/
+div#ml-container {
+	overflow-x: auto;
+	position: fixed;
+	bottom: 10vh;
+	left: 50%;
+	width: 90%;
+	height: 500px;
+	z-index: -1;
+
+	transform: translateX(-50%);
+}
+
+div#ml-container table {
+	margin: 0 auto;
+	width: 100%;
+	border-collapse: collapse;
+}
+
+div#ml-container table, th, td {
+	border: 1px solid #000;
+}
+
+div#ml-container th, td {
+	padding: 0 2px;
+}
+
+div#ml-container th {
+	background: #000080;
+	color: #fff;
+}
+
+div#ml-container tr:hover td {
+	background: #f5f5f5;
+}
+
+div#ml-container td {
+	height: 50px;
+	vertical-align: bottom;
+}
+
+div#ml-container td:nth-child(1) {
+	font-weight: 800;
+}
+
+div#ml-container table.ml-active td:nth-child(3) {
+	font-weight: 800;
+}
+
+div#ml-container table.ml-active td:not(:nth-child(1)):not(:nth-child(3)) {
+	color: transparent;
+	text-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+
+/* ---------------
+/* Footer
+/* --------------*/
+div#footer {
+	position: fixed;
+	background: gray;
+	bottom: 0;
+	left: 50%;
+	border-radius: 5px 5px 0 0;
+	width: 200px;
+	text-align: center;
+	color: #fff;
+
+	transform: translateX(-50%);
+}
+
+div#footer p {
+	font-size: 14px;
+}
+
+div#footer p a{
+	color: hotpink;
+}
