@@ -62,14 +62,14 @@ Check to see of the daemon process is working in the background
 
 ```bash
 $ docker ps -a
-ContainerID	Image	   Command	 Created   Status		Ports				   Names
+ContainerID	Image	     Command	 Created   Status		    Ports				           Names
 ***********	image-name "/bin/sh" 3 seconds Up 3 seconds 0.0.0.0:5000->5000/tcp Rdm-name
 ```
 
 ## Sample
 After successfully deploying the container to the port 5000 open up an Internet browser and type `http://localhost:5000` into the URL bar and the following webpage will magically appear.
 
-![](/home/miyamoto/Documents/coding-repos/github/buitron/nba_winning/media/sample.gif)
+![Sample GIF](./media/sample.gif)
 
 to terminate the docker daemon process and then remove the image from your system:
 
